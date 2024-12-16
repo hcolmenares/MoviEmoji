@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emoji Canvas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="movie-emoji">
+      <h1>Emoji Canvas</h1>
+
+      <div class="column">
+        <div class="row control-wrapper">
+          <div class="controls">
+            <emoji-picker></emoji-picker>
+          </div>
+
+          <div id="emoji-canvas"></div>
+        </div>
+
+        <div class="buttons">
+          <button id="remove-last-emoji">Remove Last Emoji</button>
+          <button id="download-canvas">Download as Image</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emoji Button Library -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"
+    ></script>
+    <!-- html2canvas Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Custom Script -->
+    <script src="main.js"></script>
+  </body>
+</html>

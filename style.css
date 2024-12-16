@@ -1,0 +1,143 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Title */
+h1 {
+  font-size: 1.5em; /* Tamaño reducido en móviles */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Controls container */
+.controls {
+  width: 90%; /* Ancho más grande en móvil */
+  margin: 0 auto; /* Centrado */
+}
+
+.row,
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.column {
+  flex-direction: column;
+}
+
+/* Control wrapper */
+.control-wrapper {
+  width: 100%;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1em;
+  margin: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Emoji Picker styling */
+emoji-picker {
+  display: block;
+  margin: 10px auto;
+  max-width: 250px; /* Tamaño más pequeño para móviles */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Emoji Canvas */
+#emoji-canvas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 90%; /* Ancho más grande en móviles */
+  padding: 20px;
+  min-height: 200px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.emoji-item {
+  font-size: 3em; /* Tamaño más pequeño en móviles */
+  margin: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.emoji-item:hover {
+  transform: scale(1.2);
+}
+
+/* Media Queries */
+
+/* Tablet (hasta 768px) */
+@media (min-width: 600px) {
+  .control-wrapper {
+    flex-direction: row;
+  }
+  .controls {
+    width: 80%; /* Aumentar ancho de los controles */
+  }
+
+  h1 {
+    font-size: 1.8em; /* Aumento en el tamaño del título */
+  }
+
+  emoji-picker {
+    max-width: 300px; /* Tamaño más grande para tabletas */
+  }
+
+  #emoji-canvas {
+    width: 80%; /* Ajuste en el canvas */
+    margin: 20px auto;
+  }
+
+  .emoji-item {
+    font-size: 4em; /* Aumento en el tamaño de los emojis */
+  }
+}
+
+/* Laptop/PC (desde 769px en adelante) */
+@media (min-width: 769px) {
+  .controls {
+    width: 60%; /* Más centrado en pantallas más grandes */
+  }
+
+  h1 {
+    font-size: 2em; /* Tamaño estándar del título */
+  }
+
+  emoji-picker {
+    max-width: 350px; /* Tamaño mayor en pantallas más grandes */
+  }
+
+  #emoji-canvas {
+    width: 70%; /* Aumento del tamaño del canvas */
+  }
+
+  .emoji-item {
+    font-size: 5em; /* Tamaño estándar de los emojis */
+  }
+}
